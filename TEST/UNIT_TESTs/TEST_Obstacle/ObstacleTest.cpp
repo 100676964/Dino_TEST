@@ -1,4 +1,4 @@
-#include "../../../Animal.h"
+#include "../../../Obstacle.h"
 using namespace Dino;
 bool test_returnX()
 {
