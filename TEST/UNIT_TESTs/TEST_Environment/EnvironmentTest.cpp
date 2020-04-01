@@ -1,26 +1,77 @@
-#include ../../../Animal.h"
+#include "../../../Environment.h"
+using namespace nana;
+using namespace std;
 using namespace Dino;
-bool test_returnX()
+
+bool test_setStretch()
 {
-    Animal bird(1,10,10,10);
-    std::cout<<bird.returnX();
+    Environment e();
+    en.setStretch(2);
 
 }
-bool test_returnY()
+bool test_updateEnvironment()
 {
-    Animal bird(1,10,10,10);
-    std::cout<<bird.returnY();
+    Environment e();
 }
-bool test_returnFrame()
-{
 
-}
-bool test_setPos()
-{
 
+bool test_returnObstacles()
+{
+    Environment e();
 }
+
+bool test_returnGrounds()
+{
+    Environment e();
+}
+
+bool test_continueAll()
+{
+    Environment e();
+}
+
+bool test_stopAll()
+{
+    Environment e();
+}
+
+bool test_setPassingSpeed()
+{
+    Environment e();
+}
+
+bool test_setGroundPos()
+{
+    Environment e();
+}
+
+bool test_returnGroundPos()
+{
+    Environment e();
+}
+
+bool test_returnYSize()
+{
+    Environment e();
+}
+
+bool test_returnXSize()
+{
+    Environment e();
+}
+
+bool test_returnPassingSpeed()
+{
+    Environment e();
+}
+bool test_reset()
+{
+    Environment e();
+}
+
+
 
 int main()
 {
-    
+
 }

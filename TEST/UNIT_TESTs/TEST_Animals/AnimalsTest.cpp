@@ -1,4 +1,4 @@
-#include ../../../Animals.h"
+#include "../../Animals.h"
 using namespace Dino;
 bool test_updateAnimals()
 {
@@ -29,5 +29,5 @@ bool test_returnPassingSpeed()
 }
 int main()
 {
-    
-}
+
+} 
