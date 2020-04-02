@@ -1,6 +1,7 @@
-#include "../../Animals.h"
-#include "../../Environment.h"
-using namespace Dino;
+#include "AnimalsTest.h"
+// #include "../../Animals.h"
+// #include "../../Environment.h"
+// using namespace Dino;
 bool test_initAnimals()
 {
     Animals tanys(10,10,1);
