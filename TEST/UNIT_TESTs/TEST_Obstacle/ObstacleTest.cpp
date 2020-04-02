@@ -1,5 +1,6 @@
-#include "../../../Obstacle.h"
-using namespace Dino;
+#include "ObstacleTest.h"
+// #include "../../../Obstacle.h"
+// using namespace Dino;
 bool test_returnSizeX()
 {
     Obstacle ob(1);
