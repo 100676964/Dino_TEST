@@ -8,11 +8,11 @@ bool test_returnSizeX()
     if(val!=9) return false;
     
     Obstacle ob2(2);
-    int val=ob2.returnSizeX();
+    val=ob2.returnSizeX();
     if(val!=12) return false;
     
     Obstacle ob3(-1);
-    int val=ob3.returnSizeX();
+    val=ob3.returnSizeX();
     if(val!=6) return false;
     
     return true;
@@ -24,11 +24,11 @@ bool test_returnSizeY()
     if(val!=12) return false;
     
     Obstacle ob2(2);
-    int val=ob2.returnSizeY();
+    val=ob2.returnSizeY();
     if(val!=23) return false;
     
     Obstacle ob3(-1);
-    int val=ob3.returnSizeY();
+    val=ob3.returnSizeY();
     if(val!=6) return false;
     
     return true;
