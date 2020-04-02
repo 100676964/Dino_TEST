@@ -52,9 +52,9 @@ bool test_collipse()
     
     return true;
 }
-int main()
-{
-    if(test_returnSizeX()&&test_returnSizeY()&&test_setPos()&&test_collipse()) std::cout<<"Obstacle test: passed\n";
-    else  std::cout<<"Obstacle test: failed\n";
+// int main()
+// {
+//     if(test_returnSizeX()&&test_returnSizeY()&&test_setPos()&&test_collipse()) std::cout<<"Obstacle test: passed\n";
+//     else  std::cout<<"Obstacle test: failed\n";
     
-}
+// }
