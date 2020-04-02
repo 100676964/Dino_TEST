@@ -5,7 +5,7 @@
 bool test_initAnimals()
 {
     Animals tanys(10,10,1);
-    if(tanys.returnPassingSpeed!=2) return false;
+    if(tanys.returnPassingSpeed()!=2) return false;
     
     return true;
 
@@ -16,7 +16,7 @@ bool test_reset()
     
     tanys.setSpeed(50);
     tanys.reset();
-    if(tanys.returnPassingSpeed!=2) return false;
+    if(tanys.returnPassingSpeed()!=2) return false;
     
     return true;
 }
@@ -26,7 +26,7 @@ bool test_setPassingSpeed()
     Animals tanys(10,10,1);
     
     tanys.setSpeed(40);
-    if(tanys.returnPassingSpeed!=40) return false;
+    if(tanys.returnPassingSpeed()!=40) return false;
     
     return true;
 }
