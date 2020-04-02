@@ -1,5 +1,6 @@
 #include "../../../Dino.h"
 using namespace Dino;
+namespace dinoT{
 bool test_reset();
 bool test_setStretch();
 bool test_returnDino();
@@ -17,3 +18,4 @@ bool test_returnYSize();
 bool test_returnXSize();
 bool test_returnHScore();
 bool test_setHScore();
+}

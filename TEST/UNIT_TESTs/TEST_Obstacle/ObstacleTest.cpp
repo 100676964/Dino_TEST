@@ -1,7 +1,7 @@
 #include "ObstacleTest.h"
 // #include "../../../Obstacle.h"
 // using namespace Dino;
-bool test_returnSizeX()
+bool obsT::test_returnSizeX()
 {
     Obstacle ob(1);
     int val=ob.returnSizeX();
@@ -17,7 +17,7 @@ bool test_returnSizeX()
     
     return true;
 }
-bool test_returnSizeY()
+bool obsT::test_returnSizeY()
 {
     Obstacle ob(1);
     int val=ob.returnSizeY();
@@ -34,7 +34,7 @@ bool test_returnSizeY()
     return true;
 }
 
-bool test_setPos()
+bool obsT::test_setPos()
 {
     Obstacle ob(1);
     ob.setPos(2,5);
@@ -43,7 +43,7 @@ bool test_setPos()
     
     return true;
 }
-bool test_collipse()
+bool obsT::test_collipse()
 {
     Obstacle ob(1);
     if(ob.isCollipsed()!=false) return false;
@@ -53,9 +53,3 @@ bool test_collipse()
     
     return true;
 }
-// int main()
-// {
-//     if(test_returnSizeX()&&test_returnSizeY()&&test_setPos()&&test_collipse()) std::cout<<"Obstacle test: passed\n";
-//     else  std::cout<<"Obstacle test: failed\n";
-    
-// }

@@ -2,7 +2,7 @@
 // #include "../../Animals.h"
 // #include "../../Environment.h"
 // using namespace Dino;
-bool test_initAnimals()
+bool aniT::test_initAnimals()
 {
     Animals tanys(10,10,1);
     if(tanys.returnPassingSpeed()!=2) return false;
@@ -10,7 +10,7 @@ bool test_initAnimals()
     return true;
 
 }
-bool test_reset()
+bool aniT::test_reset()
 {
     Animals tanys(10,10,1);
     
@@ -21,7 +21,7 @@ bool test_reset()
     return true;
 }
 
-bool test_setPassingSpeed()
+bool aniT::test_setPassingSpeed()
 {
     Animals tanys(10,10,1);
     
@@ -30,7 +30,7 @@ bool test_setPassingSpeed()
     
     return true;
 }
-bool test_Update()
+bool aniT::test_Update()
 {
     Environment en(10,10,1);
     Animals tanys(10,10,1);
@@ -47,8 +47,3 @@ bool test_Update()
         index++;
     }
 }
-// int main()
-// {
-//     if(test_initAnimals()&&test_reset()&&test_setPassingSpeed()&&test_Update()) std::count<<"Animals Test: passed\n";
-//     else std::count<<"Animals Test: failed\n";
-// } 

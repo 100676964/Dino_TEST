@@ -1,5 +1,5 @@
 #include "DinoTest.h"
-bool test_reset()
+bool dinoT::test_reset()
 {
     Dino::Dino dinoT(10,10,1);
     dinoT.setDead();
@@ -13,7 +13,7 @@ bool test_reset()
         return false;
     }
 }
-bool test_setStretch()
+bool dinoT::test_setStretch()
 {
     int windowX = 50;
     int windowY = 6;
@@ -34,7 +34,7 @@ bool test_setStretch()
     else
         return false;
 }
-bool test_returnDino()
+bool dinoT::test_returnDino()
 {
     Dino::Dino dinoA(10,10,1);
     Dino::Dino dinoB(10,10,1);
@@ -51,7 +51,7 @@ bool test_returnDino()
     }
     return true;
 }
-bool test_returnCurrentFrame()
+bool dinoT::test_returnCurrentFrame()
 {
     Dino::Dino dinoA(10,10,1);
     Dino::Dino dinoB(10,10,1);
@@ -86,7 +86,7 @@ bool test_returnCurrentFrame()
     
     return true;
 }
-bool test_increaseFrame()
+bool dinoT::test_increaseFrame()
 {
     Dino::Dino dinoA(10,10,1);
     Dino::Dino dinoB(10,10,1);
@@ -104,7 +104,7 @@ bool test_increaseFrame()
     }
     return false;
 }
-bool test_decreaseFrame()
+bool dinoT::test_decreaseFrame()
 {
     Dino::Dino dinoA(10,10,1);
     Dino::Dino dinoB(10,10,1);
@@ -137,7 +137,7 @@ bool test_decreaseFrame()
     }
     return true;
 }
-bool test_setDead()
+bool dinoT::test_setDead()
 {
     Dino::Dino dinoA(10,10,1);
     if(dinoA.deadOrNot() == false)
@@ -150,7 +150,7 @@ bool test_setDead()
     else
         return false;  
 }
-bool test_deadOrNot()
+bool dinoT::test_deadOrNot()
 {
     Dino::Dino dinoA(10,10,1);
     if(dinoA.deadOrNot() == false)
@@ -163,7 +163,7 @@ bool test_deadOrNot()
     else
         return false;  
 }
-bool test_autoFrameChange()
+bool dinoT::test_autoFrameChange()
 {
     Dino::Dino dinoA(10,10,1);
     Dino::Dino dinoB(10,10,1);
@@ -197,7 +197,7 @@ bool test_autoFrameChange()
     }
     return false;
 }
-bool test_setJump()
+bool dinoT::test_setJump()
 {
     Dino::Dino dinoA(10,10,1);
     try
@@ -212,7 +212,7 @@ bool test_setJump()
     return true;
     
 }
-bool test_calculateGravity()
+bool dinoT::test_calculateGravity()
 {
     Dino::Dino dinoA(50,6,1);
     Environment env(50,6,1);
@@ -237,7 +237,7 @@ bool test_calculateGravity()
     return true;
     
 }
-bool test_calculateCollipse()
+bool dinoT::test_calculateCollipse()
 {
     Dino::Dino dinoA(800,600,5);
     Environment env(800,600,5);
@@ -254,7 +254,7 @@ bool test_calculateCollipse()
     return false;
     
 }
-bool test_calculateHp()
+bool dinoT::test_calculateHp()
 {
     Dino::Dino dinoA(800,600,5);
     Environment env(800,600,5);
@@ -273,7 +273,7 @@ bool test_calculateHp()
     }
     return true;
 }
-bool test_returnYSize()
+bool dinoT::test_returnYSize()
 {
     Dino::Dino dinoA(800,600,5);
     if(dinoA.returnYSize() == 19)
@@ -281,7 +281,7 @@ bool test_returnYSize()
     else
         return false;
 }
-bool test_returnXSize()
+bool dinoT::test_returnXSize()
 {
     Dino::Dino dinoA(800,600,5);
     if(dinoA.returnXSize() == 19)
@@ -289,7 +289,7 @@ bool test_returnXSize()
     else
         return false;
 }
-bool test_returnHScore()
+bool dinoT::test_returnHScore()
 {
     int Tscore = 100;
     Dino::Dino dinoA(800,600,5);
@@ -299,7 +299,7 @@ bool test_returnHScore()
     else
         return false;
 }
-bool test_setHScore()
+bool dinoT::test_setHScore()
 {
     int Tscore = 100;
     Dino::Dino dinoA(800,600,5);
