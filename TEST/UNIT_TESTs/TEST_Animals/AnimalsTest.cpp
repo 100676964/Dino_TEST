@@ -46,8 +46,8 @@ bool test_Update()
         index++;
     }
 }
-int main()
-{
-    if(test_initAnimals()&&test_reset()&&test_setPassingSpeed()&&test_Update()) std::count<<"Animals Test: passed\n";
-    else std::count<<"Animals Test: failed\n";
-} 
+// int main()
+// {
+//     if(test_initAnimals()&&test_reset()&&test_setPassingSpeed()&&test_Update()) std::count<<"Animals Test: passed\n";
+//     else std::count<<"Animals Test: failed\n";
+// } 
