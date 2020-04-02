@@ -2,8 +2,7 @@
 using namespace Dino;
 bool test_returnX()
 {
-    Animal bird(1,10,10,10);
-    std::cout<<bird.returnX();
+   Dino testsubject(10,10,)
 
 }
 bool test_reset()
