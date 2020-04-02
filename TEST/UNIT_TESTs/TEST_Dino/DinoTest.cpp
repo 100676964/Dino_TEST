@@ -1,5 +1,4 @@
-#include "../../../Dino.h"
-using namespace Dino;
+#include "DinoTest.h"
 bool test_reset()
 {
     Dino::Dino dinoT(10,10,1);
@@ -64,24 +63,24 @@ bool test_returnCurrentFrame()
         {
             for(int j = 0; j < 19; j++)
             {
-                if(dinoA.returnCurrentFrame()[i][j] == 1)
-                    cout<<"#"<<" ";
-                else 
-                    cout<<"  ";
+                // if(dinoA.returnCurrentFrame()[i][j] == 1)
+                //     cout<<"#"<<" ";
+                // else 
+                //     cout<<"  ";
                 if(dinoA.returnCurrentFrame()[i][j] == dinoB.returnCurrentFrame()[i][j])
                     continue;
                 else
                     return false;
                 
             }
-            cout<<endl;
+            // cout<<endl;
         }
         dinoA.autoFrameChange();
         dinoB.autoFrameChange(); 
         for(double i = 0; i < 1000000; i++)
         ;
         framecout++;
-        system("clear");
+        // system("clear");
     
     }
     
@@ -176,24 +175,24 @@ bool test_autoFrameChange()
         {
             for(int j = 0; j < 19; j++)
             {
-                if(dinoA.returnCurrentFrame()[i][j] == 1)
-                    cout<<"#"<<" ";
-                else 
-                    cout<<"  ";
+                // if(dinoA.returnCurrentFrame()[i][j] == 1)
+                //     cout<<"#"<<" ";
+                // else 
+                //     cout<<"  ";
                 if(dinoA.returnCurrentFrame()[i][j] == dinoB.returnCurrentFrame()[i][j])
                     continue;
                 else
                     return true;
                 
             }
-            cout<<endl;
+            // cout<<endl;
         }
         dinoA.autoFrameChange();
         // dinoB.autoFrameChange(); 
         for(double i = 0; i < 1000000; i++)
         ;
         framecout++;
-        system("clear");
+        // system("clear");
     
     }
     return false;
