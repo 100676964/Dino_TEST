@@ -1,7 +1,21 @@
 #include "TEST_Dino/DinoTest.h"
 #include "TEST_Obstacle/ObstacleTest.h"
 #include "TEST_Animals/AnimalsTest.h"
-
+#include "TEST_Animal/AnimalTest.h"
+#include <fstream>
+vector<int> animal_results()
+{   
+    using namespace animT;
+    vector<int> v;
+    v.push_back(test_initAnimal());
+    v.push_back(animT::test_returnX());
+    v.push_back(animT::test_returnY());
+    v.push_back(animT::test_returnFrame());
+    v.push_back(animT::test_updateFrame());
+    v.push_back(animT::test_setPos());
+    v.push_back(test_Collipse());  
+    return v;
+}
 vector<int> animals_results()
 {   
     using namespace aniT;
@@ -47,10 +61,43 @@ vector<int> dino_results()
 }
 int main()
 {
+    ofstream resultfile;
+    resultfile.open("../TEST_Results/Unit_Tests_Results");
+    
+    cout<<"Performing tests on Dino..."<<endl;
+    vector<int> dino = dino_results();
+    
+    cout<<"Performing tests on Obstacle..."<<endl;
+    vector<int> obstacle = obstacle_results();
+    
+    cout<<"Performing tests on Animals..."<<endl;
+    vector<int> animals = animals_results();
+    
+    cout<<"Performing tests on Animal..."<<endl;
+    vector<int> animal = animal_results();
+    cout<<"All Unit Tests are done!"<<endl;
+    
+    resultfile<<"Dino_Test_Results :"<<endl;
+    for(int i = 0; i < dino.size(); i++)
+        resultfile<<dino.at(i);
+    resultfile<<endl;
+    
+    resultfile<<"Obstacle_Test_Results :"<<endl;
+    for(int i = 0; i < obstacle.size(); i++)
+        resultfile<<obstacle.at(i);
+    resultfile<<endl;
+    
+    resultfile<<"Animals_Test_Results :"<<endl;
+    for(int i = 0; i < animals.size(); i++)
+        resultfile<<animals.at(i);
+    resultfile<<endl;
+    
+    resultfile<<"Animal_Test_Results :"<<endl;
+    for(int i = 0; i < animal.size(); i++)
+        resultfile<<animal.at(i);
+    resultfile<<endl;
     
     
-    cout<<dino_results().size()<<endl;
-    cout<<obstacle_results().size()<<endl;
-    cout<<animals_results().size()<<endl;
+    resultfile.close();
 
 }
