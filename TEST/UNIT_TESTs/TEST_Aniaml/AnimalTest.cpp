@@ -25,9 +25,9 @@ bool animT::test_returnFrame()
     Animal bird2(1,10,10,10);
     
     for(int i=0;i<12;i++)
-        for(int j=0j<16;j++)
+        for(int j=0; j<16;j++)
         {
-            if(bird.returnFrame()[i][j]!=bird1.returnFrame()[i][j]) return false;
+            if(bird.returnFrame()[i][j]!=bird2.returnFrame()[i][j]) return false;
         }
     
     return true;
@@ -39,9 +39,9 @@ bool animT::test_updateFrame()
     Animal bird2(1,10,10,10);
     bird.updateFrame();
     for(int i=0;i<12;i++)
-        for(int j=0j<16;j++)
+        for(int j=0; j<16; j++)
         {
-            if(bird.returnFrame()[i][j]!=bird1.returnFrame()[i][j]) return true;
+            if(bird.returnFrame()[i][j]!= bird2.returnFrame()[i][j]) return true;
         }
     
     return false;
@@ -56,13 +56,9 @@ bool animT::test_setPos()
 bool animT::test_Collipse()
 {
     Animal bird(1,10,10,10);
-    if(isCollipsed()) return false;
+    if(bird.isCollipsed()) return false;
     bird.collipsed();
-    if(!isCollipsed()) return false;
+    if(!bird.isCollipsed()) return false;
     
     return true;
 }
-// int main()
-// {
-    
-// }
