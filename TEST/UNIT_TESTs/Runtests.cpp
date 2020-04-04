@@ -2,6 +2,7 @@
 #include "TEST_Obstacle/ObstacleTest.h"
 #include "TEST_Animals/AnimalsTest.h"
 #include "TEST_Animal/AnimalTest.h"
+#include "TEST_Environment/EnvironmentTest.h"
 #include <fstream>
 vector<int> animal_results()
 {   
@@ -59,11 +60,27 @@ vector<int> dino_results()
     v.push_back(test_setHScore());
     return v;
 }
-int main()
+vector<int> environment_results()
 {
-    ofstream resultfile;
-    resultfile.open("../TEST_Results/Unit_Tests_Results");
-    
+    using namespace ENVI;
+    vector<int> v;
+    v.push_back(test_stopAll());
+    v.push_back(test_setPassingSpeed());
+    v.push_back(test_updateEnvironment());
+    v.push_back(test_returnGroundPos());
+    v.push_back(test_returnYSize());
+    v.push_back(test_returnSizeX());
+    v.push_back(test_returnPassingSpeed());
+    return v;
+}
+int main(int argc, char *argv[])
+{
+    fstream resultfile;
+    if(argv[1] != NULL)
+        resultfile.open("TEST_Results/Unit_Tests_Results",ios::trunc|fstream::out);
+    else
+        resultfile.open("../TEST_Results/Unit_Tests_Results",ios::trunc|fstream::out);
+    cout<<"Start Unit Tests"<<endl;
     cout<<"Performing tests on Dino..."<<endl;
     vector<int> dino = dino_results();
     
@@ -75,26 +92,34 @@ int main()
     
     cout<<"Performing tests on Animal..."<<endl;
     vector<int> animal = animal_results();
+
+    cout<<"Performing tests on Environment..."<<endl;
+    vector<int> Environment = environment_results();
     cout<<"All Unit Tests are done!"<<endl;
     
-    resultfile<<"Dino_Test_Results :"<<endl;
+    resultfile<<"Dino_Test_Results:"<<endl;
     for(int i = 0; i < dino.size(); i++)
-        resultfile<<dino.at(i);
+        resultfile<<dino.at(i)<<" ";
     resultfile<<endl;
     
-    resultfile<<"Obstacle_Test_Results :"<<endl;
+    resultfile<<"Obstacle_Test_Results:"<<endl;
     for(int i = 0; i < obstacle.size(); i++)
-        resultfile<<obstacle.at(i);
+        resultfile<<obstacle.at(i)<<" ";
     resultfile<<endl;
     
-    resultfile<<"Animals_Test_Results :"<<endl;
+    resultfile<<"Animals_Test_Results:"<<endl;
     for(int i = 0; i < animals.size(); i++)
-        resultfile<<animals.at(i);
+        resultfile<<animals.at(i)<<" ";
     resultfile<<endl;
     
-    resultfile<<"Animal_Test_Results :"<<endl;
+    resultfile<<"Animal_Test_Results:"<<endl;
     for(int i = 0; i < animal.size(); i++)
-        resultfile<<animal.at(i);
+        resultfile<<animal.at(i)<<" ";
+    resultfile<<endl;
+
+    resultfile<<"Environment_Test_Results:"<<endl;
+    for(int i = 0; i < Environment.size(); i++)
+        resultfile<<Environment.at(i)<<" ";
     resultfile<<endl;
     
     

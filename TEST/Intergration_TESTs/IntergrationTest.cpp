@@ -267,11 +267,15 @@ bool Dino_Hit_Anims()//test animal(bird) collapse
         cout<<"crashed!"<<endl;
     }
 }
-int main()
+int main(int argc, char *argv[])
 {
-    ofstream file;
-    file.open("../TEST_Results/Integration_Test_Results");
-    cout<<"Testting..."<<endl;
+    fstream file;
+    cout<<"Start Intergration Tests..."<<endl;
+    if(argv[1] != NULL)
+        file.open("TEST_Results/Integration_Test_Results",ios::trunc|fstream::out);
+    else
+        file.open("../TEST_Results/Integration_Test_Results",ios::trunc|fstream::out);
+    cout<<"Testting_HP..."<<endl;
     file<<"HP_Test:"<<endl;
     if(Dino_HP_Add())
     {
@@ -284,7 +288,7 @@ int main()
         file<<"fail"<<endl;
     }
     
-    cout<<"Testting..."<<endl;
+    cout<<"Testting_FALL..."<<endl;
     file<<"FALL_Test:"<<endl;
     if(Dino_FALL_Death())
     {
@@ -297,8 +301,8 @@ int main()
         file<<"fail"<<endl;
     }
 
-    cout<<"Testting..."<<endl;
-    file<<"FALL_Test:"<<endl;
+    cout<<"Testting_ANI..."<<endl;
+    file<<"Hit_Anims:"<<endl;
     if(Dino_Hit_Anims())
     {
         cout<<"pass"<<endl;
@@ -309,4 +313,5 @@ int main()
         cout<<"fail"<<endl;
         file<<"fail"<<endl;
     }
+    cout<<"Intergration Test End"<<endl;
 }   

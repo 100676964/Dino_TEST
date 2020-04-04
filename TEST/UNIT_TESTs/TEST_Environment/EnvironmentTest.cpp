@@ -1,14 +1,6 @@
-#include "../../../Environment.h"
-#include <iostream>
-#include <stdio.h>
-#include <vector>
-
-using namespace nana;
-using namespace std;
-using namespace Dino;
-
+#include "EnvironmentTest.h"
 //test the continueAll() function as well
-bool test_stopAll()
+bool ENVI::test_stopAll()
 {
     Environment env(50,6,1);
     int num=0;
@@ -54,14 +46,14 @@ bool test_stopAll()
     }
     return res1&&res2;
 }
-bool test_setPassingSpeed()
+bool ENVI::test_setPassingSpeed()
 {
     Environment env(10,10,1);
     env.setPassingSpeed(5);
     return env.returnPassingSpeed()==5;
 }
 //test for generating all obstacles in specific environment
-bool test_updateEnvironment()
+bool ENVI::test_updateEnvironment()
 {
     int windowX = 50;
     int windowY = 6;
@@ -102,7 +94,7 @@ bool test_updateEnvironment()
 
 }
 
-bool test_returnGroundPos()
+bool ENVI::test_returnGroundPos()
 {
     
     Environment env(10,10,1);
@@ -111,25 +103,22 @@ bool test_returnGroundPos()
 
 }
 
-bool test_returnYSize()
+bool ENVI::test_returnYSize()
 {
     Environment e(50,6,5);
     return e.returnYSize() == 6;
 }
 
-bool test_returnSizeX()
+bool ENVI::test_returnSizeX()
 {
     
     Environment env(20,10,1);
     return env.returnXSize()==20;
 }
 
-bool test_returnPassingSpeed()
+bool ENVI::test_returnPassingSpeed()
 {
     Environment e(10,10,1);
     e.setPassingSpeed(5);
     return e.returnPassingSpeed()==5;
 }
-
-
-

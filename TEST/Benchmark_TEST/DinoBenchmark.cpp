@@ -26,7 +26,7 @@ void bench_marking()
 	auto cfps=chrono::steady_clock::now();
 
     form fm{API::make_center(windowSizeX, windowSizeY)};
-    fm.caption(L"Bench Mark Test");
+    fm.caption("Bench Mark Test");
     
     
     drawing dw(fm);
@@ -91,17 +91,24 @@ void bench_marking()
     T.join();
     
 }
-int main()
+int main(int argc, char *argv[])
 {
     
     cout<<"Benchmarking!"<<endl; 
     bench_marking();
-    cout<<"Test End!"<<endl;
+    cout<<"Benchmark End!"<<endl;
     double fpssum = 0;
     int maxfps = 0;
     int minfps = 1000;
+    fstream file;
+    if(argv[1] != NULL)
+        file.open("TEST_Results/Benchmark_Results",ios::trunc|fstream::out);
+    else
+        file.open("../TEST_Results/Benchmark_Results",ios::trunc|fstream::out);
+    file<<"FPS Samples:"<<endl;
     for(int i = 2; i < fpss.size(); i++)
     {
+        file<<fpss.at(i)<<" ";
         fpssum += fpss.at(i);
         if(maxfps < fpss.at(i))
         {
@@ -112,17 +119,17 @@ int main()
             minfps = fpss.at(i);
         }
     }
+    file<<endl;
     double avfps = fpssum/fpss.size();
-    cout<<"Average FPS: "<<avfps<<endl;
-    cout<<"Max FPS: "<<maxfps<<endl;
-    cout<<"Min FPS: "<<minfps<<endl;
-    ofstream file;
-    file.open("../TEST_Results/Benchmark_Results");
-    file<<"Average FPS: "<<endl;
+    cout<<"Average FPS:"<<avfps<<endl;
+    cout<<"Max FPS:"<<maxfps<<endl;
+    cout<<"Min FPS:"<<minfps<<endl;
+    
+    file<<"Average FPS:"<<endl;
     file<<avfps<<endl;
-    file<<"Max FPS: "<<endl;
+    file<<"Max FPS:"<<endl;
     file<<maxfps<<endl;
-    file<<"Min FPS: "<<endl;
+    file<<"Min FPS:"<<endl;
     file<<minfps<<endl;
     file.close();
 }

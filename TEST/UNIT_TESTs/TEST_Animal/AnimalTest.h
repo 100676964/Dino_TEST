@@ -1,6 +1,7 @@
 #include "../../../Animal.h"
 using namespace Dino;
-namespace animT{
+namespace animT
+{
 bool test_initAnimal();
 bool test_returnX();
 bool test_returnY();
