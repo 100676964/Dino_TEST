@@ -48,7 +48,7 @@ bool doIT::Dino_HP_Add()
                 API::refresh_window(fm);
             }
             dino.setJump();
-            for(int i = 0; i < 50; i++)
+            for(int i = 0; i < 30; i++)
             {
                 for(double j = 0; j < 10000000; j++);
                 dino.updateDino(env,bird,false);
