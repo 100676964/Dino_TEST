@@ -88,10 +88,12 @@ void load_results()
         }
         
     }
+    float scale = 1;
     maxsample = stoi(Benchmark.at(5));
     minsample = stoi(Benchmark.at(7));
     int diff = maxsample - minsample;
-    float scale = (float)50/(float)diff;
+    if(diff != 0)
+        scale = (float)50/(float)diff;
     // cout<<maxsample<<endl;
     // cout<<minsample<<endl;
     // cout<<diff<<endl;
