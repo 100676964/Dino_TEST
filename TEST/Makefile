@@ -8,7 +8,7 @@ lib = -lnana -lX11 -lpthread -lrt -lXft -lfontconfig -lstdc++fs
 Uout = UNIT_TESTs/RunUnitTests
 Bout = Benchmark_TEST/RunBenchmarkTest
 Iout = Intergration_TESTs/RunIntergrationTest
-all: one two three fourtw
+all: one two three four
 one: UNIT_TESTs/Runtests.cpp
 	$(CC) -I$(include) -L$(lib_path) $(Ucpp) $(lib) -o $(Uout)
 two: Benchmark_TEST/DinoBenchmark.cpp
